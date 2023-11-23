@@ -9,7 +9,7 @@ int CountDigits(int numb)
 {
     if (numb == 0) return 1;
     int count = 0;
-    while (numb != 0);
+    while (numb != 0)
     {
         numb = numb / 10;
         count++;

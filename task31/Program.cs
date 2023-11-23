@@ -8,7 +8,7 @@
 int[] GetArray(int size)
 {
     int[] array = new int[size];
-    for (int i = 0; i < 12; i++)
+    for (int i = 0; i < size; i++)
     {
         array[i] = new Random().Next(-9, 10);
     }
@@ -16,7 +16,7 @@ int[] GetArray(int size)
 }
 void PrintArray(int[] arr)
 {
-    for (int i = 0; i < 12; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         System.Console.Write(arr[i] + " ");
     }
@@ -26,7 +26,7 @@ void ElementsSumOfArray(int[] arr1)
 {
     int sumPositive = 0;
     int sumNegative = 0;
-    for (int i = 0; i < 12; i++)
+    for (int i = 0; i < arr1.Length; i++)
     {
         if(arr1[i] > 0)
         {
@@ -40,6 +40,6 @@ void ElementsSumOfArray(int[] arr1)
     System.Console.WriteLine($"Сумма положительных элементов массива равна {sumPositive}");
     System.Console.WriteLine($"Сумма отрицательных элементов массива равна {sumNegative}");
 }
-int[] userArray = GetArray();
+int[] userArray = GetArray(12);
 PrintArray(userArray);
 ElementsSumOfArray(userArray);
